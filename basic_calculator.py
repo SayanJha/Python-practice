@@ -29,9 +29,9 @@ Select operation:
 3. Multiply
 4. Divide
 5. Exit
-""")  # The outer while loop keeps the code running until the user enters 5 to
+""")  # The outer while loop keeps the code running until the user enters 5
       # to quit.
-      # The inner while keeps asking the user to enter a valid number
+      # The inner while loop keeps asking the user to enter a valid number
         while True:
             try:
                 choice = float(input("Enter choice (1/2/3/4/5): "))
