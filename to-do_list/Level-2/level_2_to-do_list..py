@@ -4,7 +4,7 @@ tasks = []
 
 
 # tasks = [
-#     {"task": "Study", "done": False}, (Element = 1)
+#     {"task": "Study", "done": False}, (Element = 1) index = 0 of the list tasks
 #     {"task": "Practice Python", "done": True},
 #     {"task": "Sleep", "done": False}
 # ]
@@ -51,7 +51,7 @@ def delete_task(tasks):
     try:
         num = int(input("\nEnter your task number to delete: "))
         if 1 <= num <= len(tasks):
-            removed = tasks.pop(num - 1)
+            removed = tasks.pop(num - 1) # User input = 2, index = 2 - 1 = 1 = num
             print(f"Deleted task: {removed["task"]}")
             show_updated_task(tasks)
         else:
@@ -65,7 +65,7 @@ def view_task(tasks):
     else:
         print("\n----- Your tasks -----")
         for i, task in enumerate(tasks, 1):
-            status = "\u2713" if task["done"] else "\u2717"
+            status = "\u2713" if task["done"] else "\u2717" # UNICODES for tick and cross
             print(f"{i}. [{status}] {task["task"]}")
 
 def mark_completed(tasks):
@@ -88,7 +88,7 @@ def main():
         while True:
             try:
                 choice = int(input("Enter operation (1/2/3/4/5/6): "))
-                if 1<= choice <= 6:
+                if 1<= choice <= 6: # We could use = if choice in tuple(x for x  in range(1, 7)):
                     break
                 else:
                     print("Invalid operation. Please try again.")
